@@ -9,7 +9,7 @@
 # Licensed under the Apache License, Version 2.0
 
 # meta developer: @dan_endy
-# scope: only_hikka
+# scope: hikka_only
 
 import random
 import requests
