@@ -8,7 +8,7 @@
 # Copyright 2022 t.me/endy_mods
 # Licensed under the Apache License, Version 2.0
 
-# meta developer: @dan_endy
+# meta developer: @endy_mods
 # scope: hikka_only
 
 import random
