@@ -19,11 +19,11 @@ from asyncio import sleep
 
 from .. import loader, utils
 
-calling_lnk = "https://x0.at/CosT.mp4"
-yes_lnk = "https://x0.at/3-of.mp4"
-hohoho_lnk = "https://x0.at/snEh.mp4"
-no_lnk = "https://x0.at/kCVU.mp4"
-ugh_lnk = "https://x0.at/WKR0.mp4"
+calling_lnk = "https://siasky.net/_Agdc1lPT-jsI2vmXkuKrw0_TLno77Bsahctqwt0LDx3CA"
+yes_lnk = "https://siasky.net/_AnH1OER62yt1inz8mocSHAC1pdZt4O96aAllHSVkjGs4A"
+hohoho_lnk = "https://siasky.net/_AGOB4aho7rRsvx-0OyC_nmLHMrAn-nqbBdFq9KIgkZ8Fw"
+no_lnk = "https://siasky.net/_Am69SVaX-zhebA5Kwvuljp-UgKWk4dFuetyITvlEUEvQg"
+ugh_lnk = "https://siasky.net/_AmrXP9sRqrs6RvVaZnsWI8UecP4UjcduljlrqP5fWJLzg4"
 
 ben_answers = ["yes", "hohoho", "no", "ugh"]
 
