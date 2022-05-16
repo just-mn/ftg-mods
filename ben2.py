@@ -35,7 +35,7 @@ class TalkingBenMod(loader.Module):
 
     @loader.unrestricted
     async def bencmd(self, message):
-        """Answer the grate prophet"""
+        """Ask the grate prophet"""
         await utils.answer(message, self.strings("wait"))
         await sleep(1)
         if not os.path.isfile("assets/call.mp4"):
