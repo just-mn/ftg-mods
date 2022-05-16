@@ -34,7 +34,7 @@ class TalkingBenMod(loader.Module):
 
     @loader.unrestricted
     async def bencmd(self, message):
-        """Answer the grate prophet"""
+        """Ask the grate prophet"""
         await utils.answer(message, self.strings("wait"))
         if not os.path.exists("assets"):
             os.mkdir("assets")
