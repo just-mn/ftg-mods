@@ -25,7 +25,7 @@ hohoho_lnk = "https://raw.githubusercontent.com/just-mn/ftg-mods/assets/hohoho.m
 no_lnk = "https://raw.githubusercontent.com/just-mn/ftg-mods/assets/no.mp4"
 ugh_lnk = "https://raw.githubusercontent.com/just-mn/ftg-mods/assets/ugh.mp4"
 
-ben_answers = ["yes", "hohoho", "no", "ugh"]
+ben_answers = ["yes", "no", "ugh"]
 
 @loader.tds
 class TalkingBenMod(loader.Module):
@@ -47,9 +47,7 @@ class TalkingBenMod(loader.Module):
             with open('assets/yes.mp4', 'wb') as f:
                 f.write(r.content)
         if not os.path.isfile("assets/hohoho.mp4"): 
-            r = requests.get(hohoho_lnk)
-            with open('assets/hohoho.mp4', 'wb') as f:
-                f.write(r.content)
+            os.remove('assets/hohoho.mp4')
         if not os.path.isfile("assets/no.mp4"):
             r = requests.get(no_lnk)
             with open('assets/no.mp4', 'wb') as f:
