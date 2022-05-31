@@ -20,7 +20,6 @@ from .. import loader, utils
 
 calling_lnk = "https://raw.githubusercontent.com/just-mn/ftg-mods/assets/calling.mp4"
 yes_lnk = "https://raw.githubusercontent.com/just-mn/ftg-mods/assets/yes.mp4"
-hohoho_lnk = "https://raw.githubusercontent.com/just-mn/ftg-mods/assets/hohoho.mp4"
 no_lnk = "https://raw.githubusercontent.com/just-mn/ftg-mods/assets/no.mp4"
 ugh_lnk = "https://raw.githubusercontent.com/just-mn/ftg-mods/assets/ugh.mp4"
 
@@ -46,10 +45,8 @@ class TalkingBenMod(loader.Module):
             r = requests.get(yes_lnk)
             with open('assets/yes.mp4', 'wb') as f:
                 f.write(r.content)
-        if not os.path.isfile("assets/hohoho.mp4"): 
-            r = requests.get(hohoho_lnk)
-            with open('assets/hohoho.mp4', 'wb') as f:
-                f.write(r.content)
+        if os.path.isfile("assets/hohoho.mp4"): 
+            os.remove('assets/hohoho.mp4')
         if not os.path.isfile("assets/no.mp4"):
             r = requests.get(no_lnk)
             with open('assets/no.mp4', 'wb') as f:
