@@ -46,7 +46,7 @@ class TalkingBenMod(loader.Module):
             r = requests.get(yes_lnk)
             with open('assets/yes.mp4', 'wb') as f:
                 f.write(r.content)
-        if not os.path.isfile("assets/hohoho.mp4"): 
+        if os.path.isfile("assets/hohoho.mp4"): 
             os.remove('assets/hohoho.mp4')
         if not os.path.isfile("assets/no.mp4"):
             r = requests.get(no_lnk)
