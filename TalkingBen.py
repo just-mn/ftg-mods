@@ -12,7 +12,6 @@
 
 import random
 import requests
-from telethon.tl.types import Message
 import os
 from asyncio import sleep
 
@@ -66,4 +65,6 @@ class TalkingBenMod(loader.Module):
         await message.client.delete_messages(message.to_id, msg)
         if not "?" in args and args!="":
             args = utils.get_args_raw(message)+"?"
-        await utils.answer(message, "🔮 "+args)
+            await utils.answer(message, "🔮 "+args)
+        if args == "":
+            await message.delete()
