@@ -63,8 +63,10 @@ class TalkingBenMod(loader.Module):
         await sleep(3)
         await message.client.send_file(message.to_id, "assets/"+ben+".mp4", video_note=True)
         await message.client.delete_messages(message.to_id, msg)
-        if not "?" in args and args!="":
-            args = utils.get_args_raw(message)+"?"
-            await utils.answer(message, "🔮 "+args)
         if args == "":
             await message.delete()
+            return
+        if not "?" in args:
+            args = utils.get_args_raw(message)+"?"
+            await utils.answer(message, "🔮 "+args)
+        
