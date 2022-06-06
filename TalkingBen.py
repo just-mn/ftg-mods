@@ -23,7 +23,7 @@ yes_lnk = "https://raw.githubusercontent.com/just-mn/ftg-mods/assets/yes.mp4"
 no_lnk = "https://raw.githubusercontent.com/just-mn/ftg-mods/assets/no.mp4"
 ugh_lnk = "https://raw.githubusercontent.com/just-mn/ftg-mods/assets/ugh.mp4"
 
-ben_answers = ["yes", "hohoho", "no", "ugh"]
+ben_answers = ["yes", "no", "ugh"]
 
 @loader.tds
 class TalkingBenMod(loader.Module):
