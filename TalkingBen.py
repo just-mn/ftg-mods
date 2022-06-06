@@ -68,5 +68,5 @@ class TalkingBenMod(loader.Module):
             return
         if not "?" in args:
             args = utils.get_args_raw(message)+"?"
-            await utils.answer(message, "🔮 "+args)
+        await utils.answer(message, "🔮 "+args)
         
