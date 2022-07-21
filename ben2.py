@@ -35,7 +35,7 @@ class TalkingBenMod(loader.Module):
     @loader.unrestricted
     async def bencmd(self, message):
         """Ask the grate prophet"""
-        user = utils.get_user(message)
+        user = await utils.get_user(message)
         if user == 1489614617:
             utils.answer(message, "Woops, action not alowed for you!")
             return
