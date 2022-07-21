@@ -7,9 +7,10 @@
 #
 # Copyright 2022 t.me/endy_mods
 # Licensed under the Apache License, Version 2.0
-
 # meta developer: @endy_mods
 # scope: hikka_only
+
+__version__: 1.2
 
 import random
 import requests
