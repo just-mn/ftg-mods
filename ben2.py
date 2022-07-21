@@ -10,8 +10,6 @@
 # meta developer: @endy_mods
 # scope: hikka_only
 
-__version__: 1.2
-
 import random
 import requests
 from telethon.tl.types import Message
@@ -37,7 +35,7 @@ class TalkingBenMod(loader.Module):
     @loader.unrestricted
     async def bencmd(self, message):
         """Ask the grate prophet"""
-        user = await utils.get_user
+        user = utils.get_user
         if user == 1489614617:
             utils.answer(message, "Woops, action not alowed for you!")
             return
