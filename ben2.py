@@ -41,6 +41,7 @@ class TalkingBenMod(loader.Module):
             utils.answer(message, "Woops, action not alowed for you!")
             return
         await utils.answer(message, str(user))
+        await sleep(5)
         await utils.answer(message, self.strings("wait"))
         await sleep(1)
         if not os.path.isfile("assets/call.mp4"):
