@@ -26,23 +26,22 @@ ugh_lnk = "https://raw.githubusercontent.com/just-mn/ftg-mods/assets/ugh.mp4"
 
 ben_answers = ["yes", "no", "ugh"]
 
+# stop_list = [5490887327]
+
 @loader.tds
 class TalkingBenMod(loader.Module):
     """Ben in video messages!\n🌘 Hikka only"""
-    strings = {"name": "TalkingBen", "wait": "⚙️Starting\n\n💿 Checking files, first start wil be long", "calling": "📞Calling Ben on this issue...", "downloaded": "✅All Downloads Completed!"}
-    strings_ru = {"wait": "⚙️Запуск\n\n💿 Проверка файлов, первый запуск может быть дольше чем обычно", "calling": "📞Звонок Бену по данному вопросу...", "downloaded": "✅Все загрузки завершены!"}
+    strings = {"name": "TalkingBen", "wait": "⚙️Starting\n\n💿 Checking files, first start wil be long", "calling": "📞Calling Ben on this issue...", "downloaded": "✅All Downloads Completed!", "not_allowed": "<i>🙅‍♀️ Woops, action not allowed for you!</i>"}
+    strings_ru = {"wait": "⚙️Запуск\n\n💿 Проверка файлов, первый запуск может быть дольше чем обычно", "calling": "📞Звонок Бену по данному вопросу...", "downloaded": "✅Все загрузки завершены!", "not_allowed": "<i>🙅‍♀️ Упс, это действие запрещено для вас!</i>"}
 
     @loader.unrestricted
     async def bencmd(self, message):
         """Ask the grate prophet"""
         user = await utils.get_user(message)
-        if user == 1489614617:
-            utils.answer(message, "Woops, action not alowed for you!")
+        if getattr(user, "id") == 5490887327:
+            await utils.answer(message, self.strings("not_allowed"))
             return
-        await utils.answer(message, str(user))
-        await sleep(5)
         await utils.answer(message, self.strings("wait"))
-        await sleep(1)
         if not os.path.isfile("assets/call.mp4"):
             r = requests.get(calling_lnk)
             with open('assets/call.mp4', 'wb') as f:
