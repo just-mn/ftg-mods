@@ -36,6 +36,10 @@ class TalkingBenMod(loader.Module):
     @loader.unrestricted
     async def bencmd(self, message):
         """Ask the grate prophet"""
+        user = await utils.get_user
+        if user == 1489614617:
+            utils.answer(message, "Woops, action not alowed for you!")
+            return
         await utils.answer(message, self.strings("wait"))
         await sleep(1)
         if not os.path.isfile("assets/call.mp4"):
