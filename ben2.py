@@ -10,8 +10,6 @@
 # meta developer: @endy_mods
 # scope: hikka_only
 
-__version__: 1.2
-
 import random
 import requests
 from telethon.tl.types import Message
