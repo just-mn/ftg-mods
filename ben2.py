@@ -28,14 +28,14 @@ ben_answers = ["yes", "no", "ugh"]
 
 @loader.tds
 class TalkingBenMod(loader.Module):
-    """Ben in video messages!\n🌘Hikka only"""
+    """Ben in video messages!\n🌘 Hikka only"""
     strings = {"name": "TalkingBen", "wait": "⚙️Starting\n\n💿 Checking files, first start wil be long", "calling": "📞Calling Ben on this issue...", "downloaded": "✅All Downloads Completed!"}
     strings_ru = {"wait": "⚙️Запуск\n\n💿 Проверка файлов, первый запуск может быть дольше чем обычно", "calling": "📞Звонок Бену по данному вопросу...", "downloaded": "✅Все загрузки завершены!"}
 
     @loader.unrestricted
     async def bencmd(self, message):
         """Ask the grate prophet"""
-        user = utils.get_user
+        user = utils.get_user(message)
         if user == 1489614617:
             utils.answer(message, "Woops, action not alowed for you!")
             return
